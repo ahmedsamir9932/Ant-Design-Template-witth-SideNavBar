@@ -12,9 +12,14 @@ import { FormsModule } from '@angular/forms';
 
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { AntDesignDemosComponent } from './ant-design-demos/ant-design-demos.component';
+import { AgGridDemosComponent } from './ag-grid-demos/ag-grid-demos.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
+    CommonModule,
     FormsModule,
     WelcomeRoutingModule, 
     NzStepsModule,
@@ -23,9 +28,10 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzDatePickerModule,
     NzAutocompleteModule,
     NzInputModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    AgGridModule
   ],
-  declarations: [WelcomeComponent],
+  declarations: [WelcomeComponent, AntDesignDemosComponent, AgGridDemosComponent],
   exports: [
     WelcomeComponent,
     NzStepsModule,
@@ -33,7 +39,8 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzButtonModule,
     NzDatePickerModule,
     NzInputModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    AgGridModule
   ]
 })
 export class WelcomeModule {}
